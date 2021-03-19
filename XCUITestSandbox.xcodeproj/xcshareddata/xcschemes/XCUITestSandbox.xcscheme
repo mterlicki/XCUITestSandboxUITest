@@ -37,11 +37,6 @@
                BlueprintName = "XCUITestSandboxUITests"
                ReferencedContainer = "container:XCUITestSandbox.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "XCUITestSandboxUITests/testLaunchPerformance()">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

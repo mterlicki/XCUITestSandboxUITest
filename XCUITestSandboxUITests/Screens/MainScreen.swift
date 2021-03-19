@@ -45,7 +45,9 @@ public class MainScreen{
         app.keyboards.buttons["Return"].tap()
     }
     
-    func setSlider(on: Decimal){
-        
+    func setSlider(on: CGFloat){
+        app.sliders["Completion"].adjust(toNormalizedSliderPosition: on)
     }
+    
+    
 }

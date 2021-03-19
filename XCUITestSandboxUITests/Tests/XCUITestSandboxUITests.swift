@@ -26,35 +26,33 @@ class XCUITestSandboxUITests: XCTestCase {
         let app = XCUIApplication()
         let mainScreen = MainScreen(app: app)
         
-        app.textFields.element.tap()
-
-        app.keys["t"].tap()
-        app.keys["e"].tap()
-        app.keys["s"].tap()
-        app.keys["t"].tap()
-        app.keyboards.buttons["Return"].tap()
+        mainScreen.fillTextField(with: "onomatopeja")
         
-        XCTAssertTrue(app.staticTexts["textLabel"].label == "test")
+        XCTAssertTrue(app.staticTexts["textLabel"].label == "onomatopeja")
     }
     
-    func testSliderControlsProgress(){
+    func testSliderControlsProgressMax(){
         let app = XCUIApplication()
-        
+        let mainScreen = MainScreen(app: app)
         //Max
-        app.sliders["Completion"].adjust(toNormalizedSliderPosition: 1)
+        mainScreen.setSlider(on: 1)
         guard let completion = app.progressIndicators.element.value as? String else {
                 XCTFail()
                 return
             }
         XCTAssertTrue(completion == "0%")
-        
+    }
+    
+    func testSliderControlsProgressMin(){
+        let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
         //Min
-        app.sliders["Completion"].adjust(toNormalizedSliderPosition: 0)
-        guard let completion2 = app.progressIndicators.element.value as? String else {
+        mainScreen.setSlider(on: 0)
+        guard let completion = app.progressIndicators.element.value as? String else {
                 XCTFail()
                 return
             }
-        XCTAssertTrue(completion2 == "100%")
+        XCTAssertTrue(completion == "100%")
     }
     
     func testButtonsShowAlerts(){
