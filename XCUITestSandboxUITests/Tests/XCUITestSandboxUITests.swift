@@ -55,7 +55,7 @@ class XCUITestSandboxUITests: XCTestCase {
         XCTAssertTrue(completion == "100%")
     }
     
-    func testButtonsShowAlerts(){
+    func testBlueButtonsShowAlerts(){
         let app = XCUIApplication()
         
         //Blue button
@@ -63,16 +63,26 @@ class XCUITestSandboxUITests: XCTestCase {
         XCTAssertTrue(app.alerts["Blue"].exists)
         app.alerts["Blue"].buttons["OK"].tap()
         
-        //Red button
-        app.buttons["Red"].tap()
-        XCTAssertTrue(app.alerts["Red"].exists)
-        app.alerts["Red"].buttons["OK"].tap()
+    }
+    
+    func testRedButtonsShowAlerts(){
+        let app = XCUIApplication()
         
         //Green Button
         app.buttons["Green"].tap()
         XCTAssertTrue(app.alerts["Green"].exists)
         app.alerts["Green"].buttons["OK"].tap()
     }
+    
+    func testGreenButtonsShowAlerts(){
+        let app = XCUIApplication()
+
+        //Green Button
+        app.buttons["Green"].tap()
+        XCTAssertTrue(app.alerts["Green"].exists)
+        app.alerts["Green"].buttons["OK"].tap()
+    }
+
     
     func testSegementedControlChangesNavitationTitle(){
         let app = XCUIApplication()
