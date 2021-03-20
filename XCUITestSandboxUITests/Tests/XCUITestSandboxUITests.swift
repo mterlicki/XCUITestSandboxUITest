@@ -90,11 +90,13 @@ class XCUITestSandboxUITests: XCTestCase {
         //Omega button
         mainScreen.segementedControlButtonOmega.tap()
         XCTAssertTrue(mainScreen.segementedControlButtonOmega.exists)
+        XCTAssertTrue(app.navigationBars["Omega"].exists)
+        
         
         //Alpha Button
         mainScreen.segementedControlButtonAlpha.tap()
         XCTAssertTrue(mainScreen.segementedControlButtonAlpha.exists)
-        
+        XCTAssertTrue(app.navigationBars["Alpha"].exists)
     }
 
     func testLaunchPerformance() throws {
