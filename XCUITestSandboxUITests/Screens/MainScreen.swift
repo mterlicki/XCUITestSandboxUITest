@@ -49,5 +49,16 @@ public class MainScreen{
         app.sliders["Completion"].adjust(toNormalizedSliderPosition: on)
     }
     
-    
+    func buttonTap(name: String){
+        switch name {
+        case "Red":
+            redButton.tap()
+        case "Blue":
+            blueButton.tap()
+        case "Green":
+            greenButtton.tap()
+        default:
+           break
+        }
+    }
 }

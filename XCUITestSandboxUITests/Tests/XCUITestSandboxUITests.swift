@@ -28,7 +28,7 @@ class XCUITestSandboxUITests: XCTestCase {
         
         mainScreen.fillTextField(with: "onomatopeja")
         
-        XCTAssertTrue(app.staticTexts["textLabel"].label == "onomatopeja")
+        XCTAssertTrue(mainScreen.textLabel.label == "onomatopeja")
     }
     
     func testSliderControlsProgressMax(){
@@ -36,7 +36,7 @@ class XCUITestSandboxUITests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         //Max
         mainScreen.setSlider(on: 1)
-        guard let completion = app.progressIndicators.element.value as? String else {
+        guard let completion = mainScreen.progressBar.value as? String else {
                 XCTFail()
                 return
             }
@@ -48,7 +48,7 @@ class XCUITestSandboxUITests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         //Min
         mainScreen.setSlider(on: 0)
-        guard let completion = app.progressIndicators.element.value as? String else {
+        guard let completion = mainScreen.progressBar.value as? String else {
                 XCTFail()
                 return
             }
@@ -57,28 +57,27 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testBlueButtonsShowAlerts(){
         let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
         
-        //Blue button
-        app.buttons["Blue"].tap()
+        mainScreen.buttonTap(name: "Blue")
         XCTAssertTrue(app.alerts["Blue"].exists)
         app.alerts["Blue"].buttons["OK"].tap()
-        
     }
     
     func testRedButtonsShowAlerts(){
         let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
         
-        //Green Button
-        app.buttons["Green"].tap()
-        XCTAssertTrue(app.alerts["Green"].exists)
-        app.alerts["Green"].buttons["OK"].tap()
+        mainScreen.buttonTap(name: "Red")
+        XCTAssertTrue(app.alerts["Red"].exists)
+        app.alerts["Red"].buttons["OK"].tap()
     }
     
     func testGreenButtonsShowAlerts(){
         let app = XCUIApplication()
-
-        //Green Button
-        app.buttons["Green"].tap()
+        let mainScreen = MainScreen(app: app)
+        
+        mainScreen.buttonTap(name: "Green")
         XCTAssertTrue(app.alerts["Green"].exists)
         app.alerts["Green"].buttons["OK"].tap()
     }
@@ -86,14 +85,15 @@ class XCUITestSandboxUITests: XCTestCase {
     
     func testSegementedControlChangesNavitationTitle(){
         let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
         
         //Omega button
-        app.segmentedControls.buttons["Omega"].tap()
-        XCTAssertTrue(app.navigationBars["Omega"].exists)
+        mainScreen.segementedControlButtonOmega.tap()
+        XCTAssertTrue(mainScreen.segementedControlButtonOmega.exists)
         
         //Alpha Button
-        app.segmentedControls.buttons["Alpha"].tap()
-        XCTAssertTrue(app.navigationBars["Alpha"].exists)
+        mainScreen.segementedControlButtonAlpha.tap()
+        XCTAssertTrue(mainScreen.segementedControlButtonAlpha.exists)
         
     }
 
