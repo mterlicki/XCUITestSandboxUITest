@@ -14,7 +14,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var slider: UISlider!
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var segmentedControl: UISegmentedControl!
-
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet var datePresentation: UILabel!
+    @IBOutlet weak var datePickedLabel: UILabel!
+    
     @IBAction func textChanged(_ sender: UITextField) {
         label.text = textField.text
     }
@@ -36,6 +39,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    @IBAction func dateChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: datePicker.date)
+        
+        datePresentation.text = strDate
     }
 }
 
