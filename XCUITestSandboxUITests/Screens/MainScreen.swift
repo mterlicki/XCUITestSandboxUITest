@@ -23,6 +23,9 @@ public class MainScreen{
     let redButton: XCUIElement
     let greenButtton: XCUIElement
     let blueButton: XCUIElement
+    let datePicker: XCUIElement
+    let dateLabel: XCUIElement
+    let datePresentationLabel: XCUIElement
     
     
     init(app: XCUIApplication){
@@ -37,6 +40,9 @@ public class MainScreen{
         redButton = app.buttons["Red"]
         greenButtton = app.buttons["Green"]
         blueButton = app.buttons["Blue"]
+        datePicker = app.datePickers["DatePicker"]
+        dateLabel = app.staticTexts["datepicked"]
+        datePresentationLabel = app.staticTexts["datePresentationLabel"]
     }
     
     func fillTextField(with: String){

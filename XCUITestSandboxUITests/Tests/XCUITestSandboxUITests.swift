@@ -40,6 +40,7 @@ class XCUITestSandboxUITests: XCTestCase {
                 XCTFail()
                 return
             }
+        print(completion)
         XCTAssertTrue(completion == "0%")
     }
     
@@ -52,6 +53,7 @@ class XCUITestSandboxUITests: XCTestCase {
                 XCTFail()
                 return
             }
+        print(completion)
         XCTAssertTrue(completion == "100%")
     }
     
@@ -106,5 +108,46 @@ class XCUITestSandboxUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    
+    func testInitialDate() {
+        let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
+        
+        XCTAssertTrue(mainScreen.datePresentationLabel.label == "")
+    }
+    
+    func testDateChanged() {
+        let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
+        
+        let datePickersQuery = app.datePickers
+        var dayPickerWheel = datePickersQuery.pickerWheels["Today"]
+        dayPickerWheel.adjust(toPickerWheelValue: "May 9")
+        
+        XCTAssertTrue(mainScreen.datePresentationLabel.label != "")
+        
+        dayPickerWheel = datePickersQuery.pickerWheels["Sun, May 9"]
+        
+        let currentDate = dateFormat(date: Date())
+        
+        print("Current date:" + currentDate)
+        
+        dayPickerWheel.adjust(toPickerWheelValue: "May 7")
+        
+        XCTAssertTrue(mainScreen.datePresentationLabel.label == currentDate)
+    }
+    
+    
+    
+    private func dateFormat(date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let strDate = dateFormatter.string(from: date)
+        
+        return strDate
     }
 }

@@ -35,6 +35,13 @@ class MainScreenTests: XCTestCase {
         XCTAssertTrue(mainScreen.redButton.exists)
         XCTAssertTrue(mainScreen.greenButtton.exists)
         XCTAssertTrue(mainScreen.blueButton.exists)
+        //XCTAssertTrue(mainScreen.datePicker.exists)
+        XCTAssertTrue(mainScreen.datePresentationLabel.exists)
+        XCTAssertTrue(mainScreen.datePresentationLabel.exists)
     }
 
+    func testDatePicker() {
+        
+        
+    }
 }
