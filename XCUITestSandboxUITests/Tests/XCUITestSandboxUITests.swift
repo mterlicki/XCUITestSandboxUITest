@@ -117,34 +117,35 @@ class XCUITestSandboxUITests: XCTestCase {
         XCTAssertTrue(mainScreen.datePresentationLabel.label == "")
     }
     
-    func testDateChanged() {
+    func testLabelShowingChangedDate() {
         let app = XCUIApplication()
         let mainScreen = MainScreen(app: app)
         
-        let datePickersQuery = app.datePickers
-        var dayPickerWheel = datePickersQuery.pickerWheels["Today"]
-        dayPickerWheel.adjust(toPickerWheelValue: "May 9")
+        let collectionViewsQuery = app.datePickers.collectionViews
+        collectionViewsQuery.buttons["Tuesday, May 11"].otherElements.containing(.staticText, identifier:"11").element.tap()
         
         XCTAssertTrue(mainScreen.datePresentationLabel.label != "")
-        
-        dayPickerWheel = datePickersQuery.pickerWheels["Sun, May 9"]
+        collectionViewsQuery.buttons["Today, Friday, May 7"].otherElements.containing(.staticText, identifier:"7").element.tap()
         
         let currentDate = dateFormat(date: Date())
-        
-        print("Current date:" + currentDate)
-        
-        dayPickerWheel.adjust(toPickerWheelValue: "May 7")
         
         XCTAssertTrue(mainScreen.datePresentationLabel.label == currentDate)
     }
     
-    
+    func testChangedDateValue() {
+        
+//        let app = XCUIApplication()
+//        let collectionViewsQuery = app.datePickers.collectionViews
+//        collectionViewsQuery.buttons["Tuesday, May 11"].otherElements.containing(.staticText, identifier:"11").element.tap()
+//        collectionViewsQuery.buttons["Wednesday, May 12"].otherElements.containing(.staticText, identifier:"12").element.tap()
+//        collectionViewsQuery.buttons["Wednesday, May 26"].otherElements.containing(.staticText, identifier:"26").element.tap()
+        
+    }
     
     private func dateFormat(date: Date) -> String {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.dateStyle = DateFormatter.Style.long
         
         let strDate = dateFormatter.string(from: date)
         
