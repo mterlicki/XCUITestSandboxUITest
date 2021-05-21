@@ -13,6 +13,10 @@
 		51F93600208F339D00265114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F935FF208F339D00265114 /* Assets.xcassets */; };
 		51F93603208F339D00265114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F93601208F339D00265114 /* LaunchScreen.storyboard */; };
 		F78C75FD2657C855003D4607 /* DatePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C75FC2657C855003D4607 /* DatePickerUITests.swift */; };
+		F78C76012657C9E0003D4607 /* NavigationBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C76002657C9E0003D4607 /* NavigationBarUITests.swift */; };
+		F78C76052657CB05003D4607 /* SliderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C76042657CB05003D4607 /* SliderUITests.swift */; };
+		F78C76092657CB25003D4607 /* ButtonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C76082657CB25003D4607 /* ButtonsUITests.swift */; };
+		F78C760D2657CB72003D4607 /* TextFieldUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C760C2657CB72003D4607 /* TextFieldUITest.swift */; };
 		F7F63CA326053E090022E4D6 /* XCUITestSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */; };
 		F7F63CB226054FB00022E4D6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CB126054FB00022E4D6 /* MainScreen.swift */; };
 		F7F63CC4260651F20022E4D6 /* MainScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CC3260651F10022E4D6 /* MainScreenTests.swift */; };
@@ -37,6 +41,10 @@
 		51F93602208F339D00265114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51F93604208F339D00265114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F78C75FC2657C855003D4607 /* DatePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerUITests.swift; sourceTree = "<group>"; };
+		F78C76002657C9E0003D4607 /* NavigationBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarUITests.swift; sourceTree = "<group>"; };
+		F78C76042657CB05003D4607 /* SliderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderUITests.swift; sourceTree = "<group>"; };
+		F78C76082657CB25003D4607 /* ButtonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsUITests.swift; sourceTree = "<group>"; };
+		F78C760C2657CB72003D4607 /* TextFieldUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldUITest.swift; sourceTree = "<group>"; };
 		F7F63CA026053E090022E4D6 /* XCUITestSandboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUITestSandboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestSandboxUITests.swift; sourceTree = "<group>"; };
 		F7F63CA426053E090022E4D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +120,10 @@
 				F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */,
 				F7F63CC3260651F10022E4D6 /* MainScreenTests.swift */,
 				F78C75FC2657C855003D4607 /* DatePickerUITests.swift */,
+				F78C76002657C9E0003D4607 /* NavigationBarUITests.swift */,
+				F78C76042657CB05003D4607 /* SliderUITests.swift */,
+				F78C76082657CB25003D4607 /* ButtonsUITests.swift */,
+				F78C760C2657CB72003D4607 /* TextFieldUITest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -257,9 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F63CC4260651F20022E4D6 /* MainScreenTests.swift in Sources */,
+				F78C76012657C9E0003D4607 /* NavigationBarUITests.swift in Sources */,
+				F78C76052657CB05003D4607 /* SliderUITests.swift in Sources */,
 				F7F63CB226054FB00022E4D6 /* MainScreen.swift in Sources */,
 				F7F63CA326053E090022E4D6 /* XCUITestSandboxUITests.swift in Sources */,
+				F78C76092657CB25003D4607 /* ButtonsUITests.swift in Sources */,
 				F78C75FD2657C855003D4607 /* DatePickerUITests.swift in Sources */,
+				F78C760D2657CB72003D4607 /* TextFieldUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,8 +40,4 @@ class MainScreenTests: XCTestCase {
         XCTAssertTrue(mainScreen.datePresentationLabel.exists)
     }
 
-    func testDatePicker() {
-        
-        
-    }
 }
