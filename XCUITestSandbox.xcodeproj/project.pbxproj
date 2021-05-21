@@ -12,6 +12,7 @@
 		51F935FE208F339C00265114 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F935FC208F339C00265114 /* Main.storyboard */; };
 		51F93600208F339D00265114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51F935FF208F339D00265114 /* Assets.xcassets */; };
 		51F93603208F339D00265114 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51F93601208F339D00265114 /* LaunchScreen.storyboard */; };
+		F78C75FD2657C855003D4607 /* DatePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78C75FC2657C855003D4607 /* DatePickerUITests.swift */; };
 		F7F63CA326053E090022E4D6 /* XCUITestSandboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */; };
 		F7F63CB226054FB00022E4D6 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CB126054FB00022E4D6 /* MainScreen.swift */; };
 		F7F63CC4260651F20022E4D6 /* MainScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F63CC3260651F10022E4D6 /* MainScreenTests.swift */; };
@@ -35,6 +36,7 @@
 		51F935FF208F339D00265114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51F93602208F339D00265114 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51F93604208F339D00265114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78C75FC2657C855003D4607 /* DatePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerUITests.swift; sourceTree = "<group>"; };
 		F7F63CA026053E090022E4D6 /* XCUITestSandboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCUITestSandboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCUITestSandboxUITests.swift; sourceTree = "<group>"; };
 		F7F63CA426053E090022E4D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			children = (
 				F7F63CA226053E090022E4D6 /* XCUITestSandboxUITests.swift */,
 				F7F63CC3260651F10022E4D6 /* MainScreenTests.swift */,
+				F78C75FC2657C855003D4607 /* DatePickerUITests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				F7F63CC4260651F20022E4D6 /* MainScreenTests.swift in Sources */,
 				F7F63CB226054FB00022E4D6 /* MainScreen.swift in Sources */,
 				F7F63CA326053E090022E4D6 /* XCUITestSandboxUITests.swift in Sources */,
+				F78C75FD2657C855003D4607 /* DatePickerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

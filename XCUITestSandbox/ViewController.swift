@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func datePickerValueChanged(_ sender: Any) {
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.long
+        dateFormatter.dateFormat = "EEEE, MMMM d"
         //dateFormatter.timeStyle = DateFormatter.Style.short
         
         let strDate = dateFormatter.string(from: datePicker.date)

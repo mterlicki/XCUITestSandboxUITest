@@ -41,6 +41,8 @@ class XCUITestSandboxUITests: XCTestCase {
                 return
             }
         print(completion)
+        XCTAssertTrue(mainScreen.slider.waitForExistence(timeout: 0.5))
+        //print (completion)
         XCTAssertTrue(completion == "0%")
     }
     
@@ -110,45 +112,4 @@ class XCUITestSandboxUITests: XCTestCase {
         }
     }
     
-    func testInitialDate() {
-        let app = XCUIApplication()
-        let mainScreen = MainScreen(app: app)
-        
-        XCTAssertTrue(mainScreen.datePresentationLabel.label == "")
-    }
-    
-    func testLabelShowingChangedDate() {
-        let app = XCUIApplication()
-        let mainScreen = MainScreen(app: app)
-        
-        let collectionViewsQuery = app.datePickers.collectionViews
-        collectionViewsQuery.buttons["Tuesday, May 11"].otherElements.containing(.staticText, identifier:"11").element.tap()
-        
-        XCTAssertTrue(mainScreen.datePresentationLabel.label != "")
-        collectionViewsQuery.buttons["Today, Friday, May 7"].otherElements.containing(.staticText, identifier:"7").element.tap()
-        
-        let currentDate = dateFormat(date: Date())
-        
-        XCTAssertTrue(mainScreen.datePresentationLabel.label == currentDate)
-    }
-    
-    func testChangedDateValue() {
-        
-//        let app = XCUIApplication()
-//        let collectionViewsQuery = app.datePickers.collectionViews
-//        collectionViewsQuery.buttons["Tuesday, May 11"].otherElements.containing(.staticText, identifier:"11").element.tap()
-//        collectionViewsQuery.buttons["Wednesday, May 12"].otherElements.containing(.staticText, identifier:"12").element.tap()
-//        collectionViewsQuery.buttons["Wednesday, May 26"].otherElements.containing(.staticText, identifier:"26").element.tap()
-        
-    }
-    
-    private func dateFormat(date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateStyle = DateFormatter.Style.long
-        
-        let strDate = dateFormatter.string(from: date)
-        
-        return strDate
-    }
 }
