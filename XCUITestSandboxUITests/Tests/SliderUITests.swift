@@ -31,6 +31,7 @@ class SliderUITests: XCTestCase {
                 return
             }
         XCTAssertTrue(mainScreen.slider.waitForExistence(timeout: 1))
+        print(completion)
         XCTAssertTrue(completion == "0%")
     }
     
@@ -45,6 +46,7 @@ class SliderUITests: XCTestCase {
             }
         
         XCTAssertTrue(mainScreen.slider.waitForExistence(timeout: 1))
+        print(completion)
         XCTAssertTrue(completion == "100%")
     }
 

@@ -29,5 +29,22 @@ class TextFieldUITest: XCTestCase {
         
         XCTAssertTrue(mainScreen.textLabel.label == "onomatopeja")
     }
+    
+    func testAddingTextUpdatesLabel() {
+        let app = XCUIApplication()
+        let mainScreen = MainScreen(app: app)
+        let text1 = "text1"
+        mainScreen.fillTextField(with: text1)
+        
+        let text2 = "text2"
+        mainScreen.fillTextField(with: text2)
+        
+        XCTAssertTrue(mainScreen.textLabel.label == text1 + text2)
+        
+        //XCTAssertTrue(mainScreen.textLabel.label == "onomatopeja")
+//        mainScreen.textField.tap()
+//        mainScreen.fillTextField(with: "onomatopeja")
+//        app.keyboards.buttons["Return"].tap()
+    }
 
 }

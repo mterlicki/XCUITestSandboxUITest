@@ -48,7 +48,7 @@ public class MainScreen{
     func fillTextField(with: String){
         textField.tap()
         textField.typeText(with)
-        app.keyboards.buttons["Return"].tap()
+        //app.keyboards.buttons["Return"].tap()
     }
     
     func setSlider(on: CGFloat){

@@ -33,36 +33,41 @@ class DatePickerUITests: XCTestCase {
         let mainScreen = MainScreen(app: app)
         
         let date = dateSinceTodayToString(gate: 1)
-        
         let collectionViewsQuery = app.datePickers.collectionViews
         collectionViewsQuery.buttons[date].tap()
         
         XCTAssertTrue(mainScreen.datePresentationLabel.label == date)
+        XCTAssertTrue(collectionViewsQuery.buttons[date].isSelected)
     }
     
     func testLabelShowingChangedDate() {
         let app = XCUIApplication()
         let mainScreen = MainScreen(app: app)
-        
-        let pastDate = dateSinceTodayToString(gate: 1)
-        
         let collectionViewsQuery = app.datePickers.collectionViews
-        collectionViewsQuery.buttons[pastDate].tap()
         
-        XCTAssertTrue(mainScreen.datePresentationLabel.label == pastDate)
+        // Wybór 1 daty
+        let firstDate = dateSinceTodayToString(gate: 1)
+        collectionViewsQuery.buttons[firstDate].tap()
         
-        let futureDate = dateSinceTodayToString(gate: 3)
+        XCTAssertTrue(mainScreen.datePresentationLabel.label == firstDate)
+        XCTAssertTrue(collectionViewsQuery.buttons[firstDate].isSelected)
         
-        collectionViewsQuery.buttons[futureDate].tap()
-
-        XCTAssertTrue(mainScreen.datePresentationLabel.waitForExistence(timeout: 0.5))
-        XCTAssertTrue(mainScreen.datePresentationLabel.label == futureDate)
+        //Wybór 2 daty
+        let secondDate = dateSinceTodayToString(gate: 3)
+        collectionViewsQuery.buttons[secondDate].tap()
+        
+        XCTAssertTrue(mainScreen.datePresentationLabel.waitForExistence(timeout: 1))
+        XCTAssertTrue(collectionViewsQuery.buttons[secondDate].isSelected)
+        XCTAssertFalse(collectionViewsQuery.buttons[firstDate].isSelected)
+        XCTAssertTrue(mainScreen.datePresentationLabel.label == secondDate)
+        
+        
     }
     
     
 
     
-    func dayFormatter(date: Date) -> String {
+    private func dayFormatter(date: Date) -> String {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "EEEE, MMMM d"
             let day = dateFormatter.string(from: date)
@@ -70,7 +75,7 @@ class DatePickerUITests: XCTestCase {
             return day
     }
     
-    func dateSinceTodayToString(gate: Double) -> String {
+    private func dateSinceTodayToString(gate: Double) -> String {
         
         
         if (gate == 0)
@@ -84,5 +89,7 @@ class DatePickerUITests: XCTestCase {
             return dayname
         }
     }
+    
+    
 
 }
