@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1wR-fG-or1">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="XCUITestSandbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RbX-yM-VF2">
-                                <rect key="frame" x="20" y="108" width="374" height="286"/>
+                                <rect key="frame" x="20" y="70" width="770" height="286"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cqs-Pv-PP7">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="770" height="31"/>
                                         <accessibility key="accessibilityConfiguration" identifier="textInput"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -30,25 +30,25 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="owT-ip-Fjc">
-                                        <rect key="frame" x="0.0" y="51" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="51" width="770" height="31"/>
                                         <accessibility key="accessibilityConfiguration" identifier="textLabel"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eI4-No-62H">
-                                        <rect key="frame" x="-2" y="102" width="378" height="32"/>
+                                        <rect key="frame" x="-2" y="102" width="774" height="32"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Completion"/>
                                         <connections>
                                             <action selector="sliderDragged:" destination="BYZ-38-t0r" eventType="valueChanged" id="7lV-3M-dMB"/>
                                         </connections>
                                     </slider>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FmZ-tk-Uuc">
-                                        <rect key="frame" x="0.0" y="153" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="153" width="770" height="31"/>
                                         <accessibility key="accessibilityConfiguration" identifier="progress"/>
                                     </progressView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-BQ-3tA">
-                                        <rect key="frame" x="0.0" y="204" width="374" height="32"/>
+                                        <rect key="frame" x="0.0" y="204" width="770" height="32"/>
                                         <segments>
                                             <segment title="Alpha"/>
                                             <segment title="Omega"/>
@@ -58,10 +58,10 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3ky-UF-0rU">
-                                        <rect key="frame" x="0.0" y="255" width="374" height="31"/>
+                                        <rect key="frame" x="0.0" y="255" width="770" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="668-Tu-6G5">
-                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="256.5" height="31"/>
                                                 <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="redButton"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
@@ -73,7 +73,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-Ls-9cH">
-                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="31"/>
+                                                <rect key="frame" x="256.5" y="0.0" width="257" height="31"/>
                                                 <color key="backgroundColor" red="0.0" green="0.85362204581944445" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="greenButton"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
@@ -85,7 +85,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuI-l8-GMF">
-                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="31"/>
+                                                <rect key="frame" x="513.5" y="0.0" width="256.5" height="31"/>
                                                 <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="blueButton"/>
                                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
@@ -100,44 +100,43 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="djw-pe-fC2" userLabel="datePicker">
-                                <rect key="frame" x="16" y="404" width="378" height="410.33333333333326"/>
-                                <connections>
-                                    <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3FY-Qw-xQ5"/>
-                                </connections>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date picked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-WM-H2M">
-                                <rect key="frame" x="16" y="821.33333333333337" width="95.5" height="20.333333333333371"/>
-                                <accessibility key="accessibilityConfiguration" identifier="datepicked"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4me-Cx-q0E">
-                                <rect key="frame" x="120" y="821.33333333333337" width="231" height="20.666666666666629"/>
-                                <accessibility key="accessibilityConfiguration" identifier="datePresentationLabel"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YKu-mw-xGd">
+                                <rect key="frame" x="20" y="366" width="770" height="694"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="djw-pe-fC2" userLabel="datePicker">
+                                        <rect key="frame" x="0.0" y="0.0" width="770" height="623.5"/>
+                                        <connections>
+                                            <action selector="datePickerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="3FY-Qw-xQ5"/>
+                                        </connections>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date picked:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-WM-H2M">
+                                        <rect key="frame" x="0.0" y="623.5" width="770" height="20.5"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="datepicked"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4me-Cx-q0E">
+                                        <rect key="frame" x="0.0" y="644" width="770" height="50"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="datePresentationLabel"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RbX-yM-VF2" secondAttribute="bottom" id="2B3-GO-Nkz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4me-Cx-q0E" secondAttribute="bottom" constant="20" id="3yX-pL-l2L"/>
                             <constraint firstItem="RbX-yM-VF2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7ml-qB-4Nc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4me-Cx-q0E" secondAttribute="trailing" constant="24" id="91Z-pu-90M"/>
-                            <constraint firstItem="4me-Cx-q0E" firstAttribute="top" secondItem="djw-pe-fC2" secondAttribute="bottom" constant="7" id="9Kf-Zi-5l1"/>
-                            <constraint firstItem="4me-Cx-q0E" firstAttribute="leading" secondItem="Jj1-WM-H2M" secondAttribute="trailing" constant="8.5" id="OEN-1A-jVY"/>
-                            <constraint firstItem="Jj1-WM-H2M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OKH-MZ-aST"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="djw-pe-fC2" secondAttribute="trailing" constant="20" id="eZ9-Yh-CdB"/>
-                            <constraint firstItem="Jj1-WM-H2M" firstAttribute="top" secondItem="djw-pe-fC2" secondAttribute="bottom" constant="7" id="f2o-cp-wQ9"/>
+                            <constraint firstItem="YKu-mw-xGd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D3I-hS-RAG"/>
+                            <constraint firstItem="YKu-mw-xGd" firstAttribute="top" secondItem="RbX-yM-VF2" secondAttribute="bottom" constant="10" id="Ml8-rs-fAZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RbX-yM-VF2" secondAttribute="trailing" constant="20" id="fqU-l9-xJ5"/>
                             <constraint firstItem="RbX-yM-VF2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="g9k-mU-35U"/>
-                            <constraint firstItem="djw-pe-fC2" firstAttribute="top" secondItem="RbX-yM-VF2" secondAttribute="bottom" constant="10" id="kUe-WV-Vmy"/>
-                            <constraint firstItem="djw-pe-fC2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qQo-Ez-yj2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jj1-WM-H2M" secondAttribute="bottom" constant="20.5" id="vbd-LV-7Fo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YKu-mw-xGd" secondAttribute="trailing" constant="20" id="sl3-rL-Yxo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YKu-mw-xGd" secondAttribute="bottom" constant="20" id="wps-Ai-gWd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Alpha" id="puu-8s-puZ"/>
@@ -154,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="-564.46776611694156"/>
+            <point key="canvasLocation" x="891.85185185185185" y="-565"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pGd-lY-5Jg">
@@ -162,7 +161,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1wR-fG-or1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9bR-IW-Rdq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
