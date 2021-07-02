@@ -25,7 +25,7 @@ class DatePickerUITests: XCTestCase {
         let app = XCUIApplication()
         let mainScreen = MainScreen(app: app)
         
-        XCTAssertTrue(mainScreen.datePresentationLabel.label == "")
+        XCTAssertTrue(mainScreen.datePresentationLabel.label == "-")
     }
     
     func testLabelShowingPickedDate() {
@@ -46,19 +46,22 @@ class DatePickerUITests: XCTestCase {
         let collectionViewsQuery = app.datePickers.collectionViews
         
         // Wybór 1 daty
-        let firstDate = dateSinceTodayToString(gate: 1)
+        let firstDate = dateSinceTodayToString(gate: 12)
         collectionViewsQuery.buttons[firstDate].tap()
         
         XCTAssertTrue(mainScreen.datePresentationLabel.label == firstDate)
         XCTAssertTrue(collectionViewsQuery.buttons[firstDate].isSelected)
         
         //Wybór 2 daty
-        let secondDate = dateSinceTodayToString(gate: 3)
+        let secondDate = dateSinceTodayToString(gate: 5)
         collectionViewsQuery.buttons[secondDate].tap()
+        collectionViewsQuery.buttons[secondDate].tap()
+        print("Tapnięcie " + secondDate)
         
-        XCTAssertTrue(mainScreen.datePresentationLabel.waitForExistence(timeout: 1))
-        XCTAssertTrue(collectionViewsQuery.buttons[secondDate].isSelected)
+        XCTAssertTrue(mainScreen.datePresentationLabel.waitForExistence(timeout: 6))
+        //XCTAssertTrue(collectionViewsQuery.buttons[secondDate].isSelected)
         XCTAssertFalse(collectionViewsQuery.buttons[firstDate].isSelected)
+        print("labelka = " + mainScreen.datePresentationLabel.label + "\n second date = " + secondDate)
         XCTAssertTrue(mainScreen.datePresentationLabel.label == secondDate)
         
         
